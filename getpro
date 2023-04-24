@@ -1,0 +1,8 @@
+//跨浏览器获取目标对象
+function getTarget(ev){
+    if(ev.target){//w3c
+        return ev.target;
+    }else if(window.event.srcElement){//IE
+        return window.event.srcElement;
+    }
+}  

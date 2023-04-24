@@ -1,0 +1,8 @@
+//跨浏览器添加事件
+    function addEvent(obj,type,fn){
+        if(obj.addEventListener){
+            obj.addEventListener(type,fn,false);
+        }else if(obj.attachEvent){//IE
+            obj.attchEvent('on'+type,fn);
+        }
+    }

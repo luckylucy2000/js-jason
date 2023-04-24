@@ -1,0 +1,9 @@
+ //跨浏览器阻止默认行为
+    function preDef(ev){
+        var e = ev || window.event;
+        if(e.preventDefault){
+            e.preventDefault();
+        }else{
+            e.returnValue =false;
+        }
+    }

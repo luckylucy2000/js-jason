@@ -1,0 +1,8 @@
+//跨浏览器移除事件
+function removeEvent(obj,type,fn){
+    if(obj.removeEventListener){
+        obj.removeEventListener(type,fn,false);
+    }else if(obj.detachEvent){//兼容IE
+        obj.detachEvent('on'+type,fn);
+    }
+}
